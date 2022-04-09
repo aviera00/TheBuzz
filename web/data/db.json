@@ -1,0 +1,85 @@
+{
+  "ideas": [
+    {
+      "ideaTitle": "The first idea",
+      "body": "First body ",
+      "author": "Andrew",
+      "id": 1,
+      "score": 50,
+      "dislike": 10,
+      "like": 0
+    },
+    {
+      "ideaTitle": "sdfgsdfg",
+      "body": "sdfgsdfg",
+      "score": 0,
+      "id": 2,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "uilyuil",
+      "body": "yuilyuil",
+      "score": 0,
+      "id": 3,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "p[]",
+      "body": "p[]p[]\np]\np[\np[\n",
+      "score": 0,
+      "id": 4,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "ghjkghjk",
+      "body": "ghjkghjkghjk",
+      "score": 0,
+      "id": 5,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "p[]op[]op[]op[",
+      "body": "op[]op[]op[]op[]op[]o]op[op[]op[]",
+      "score": 0,
+      "id": 6,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "p[][[fdghdfgdfg",
+      "body": "][][][][][][][][][][][]hdfghdfgh",
+      "score": 0,
+      "id": 7,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "New idea",
+      "body": "Hello WOrld!",
+      "score": 0,
+      "id": 8,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "ideatest",
+      "body": "ideaText",
+      "score": 0,
+      "id": 9,
+      "dislike": 0,
+      "like": 0
+    },
+    {
+      "ideaTitle": "testing this out",
+      "body": "hmph",
+      "score": 0,
+      "id": 10,
+      "dislike": 0,
+      "like": 0
+    }
+  ]
+}

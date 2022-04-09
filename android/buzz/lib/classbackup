@@ -1,0 +1,82 @@
+class _messageListState extends State<messageList> {
+  //here I initialized the array that holds the JSON data and where I define the variable for the url
+  final url = 'https://api.jsonbin.io/b/6150d0f14a82881d6c55ff59';
+  var postsJson = [];
+
+  late Future<Album> futureAlbum;
+
+  @override
+  void initState() {
+    super.initState();
+    futureAlbum = fetchAlbum();
+  }
+
+  //Here is where I build the widgets that display all the information
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: ListView.separated(
+        itemCount: postsJson.length,
+        separatorBuilder: (context, index) => Divider(),
+        //itemBuilder populates the message info
+        itemBuilder: (BuildContext context, int index) {
+          final post = postsJson[index];
+          var username = post['username'];
+          print(username);
+          var title = post['title'];
+          var message = post['message'];
+          var score = post['score'];
+          return ListTile(
+            title: Text(title),
+            isThreeLine: true,
+            leading: CircleAvatar(
+              child: Text(username),
+            ),
+            subtitle: Text(message + " Score: " + score.toString()),
+            trailing: PopupMenuButton(
+              //this itemBuilder creates the popup menu to like or dislike an idea
+              itemBuilder: (context) {
+                return [
+                  const PopupMenuItem(
+                    value: 'Like',
+                    child: Text('Like'),
+                  ),
+                  const PopupMenuItem(
+                    value: 'Dislike',
+                    child: Text('Dislike'),
+                  ),
+                ];
+              },
+              //when you select like or dislike, it updates the score of that idea
+              onSelected: (String value) {
+                setState(() {
+                  int newScore;
+                  newScore = affinity(value, post['score']);
+                  putLikes(url, newScore);
+                });
+              },
+            ),
+          );
+        },
+      ),
+      //This floating action button takes you to a second screen where you can write a new post
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          var newMessage = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => postScreen()),
+          );
+          //setState updates the screen to display the new idea
+          setState(() {
+            postData(url, 'default', newMessage[0], newMessage[1], 0);
+          });
+        },
+        child: Text('Post'),
+        backgroundColor: Colors.blue,
+      ),
+    );
+  }
+}

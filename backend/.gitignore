@@ -1,0 +1,9 @@
+target/*
+
+.\settings*
+*.classpath
+*.project
+target/*
+src/main/resources/*
+bin/
+.factorypath

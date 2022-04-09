@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: edu.lehigh.cse216.yis223.admin.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.039 sec <<< FAILURE!
+testDB(edu.lehigh.cse216.yis223.admin.AppTest)  Time elapsed: 0.023 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "java.net.URI.getUserInfo()" is null
+	at edu.lehigh.cse216.yis223.admin.Database.getDatabase(Database.java:282)
+	at edu.lehigh.cse216.yis223.admin.AppTest.testDB(AppTest.java:53)
+
